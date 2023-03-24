@@ -1,0 +1,25 @@
+.header {
+    background-color: $hd-main-color;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {
+            max-width: 100px;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        } &__list {
+            max-width: 520px;
+            display: flex;
+            justify-content:space-between;
+            gap: 84px;
+            a{
+                font-size: 15px;
+                color: white;
+            }
+        } 
+    }
+}
