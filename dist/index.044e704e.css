@@ -48,4 +48,28 @@
   font-size: 15px;
 }
 
+.promo {
+  background-color: #251c31;
+}
+
+.promo__wrapper {
+  display: flex;
+}
+
+.promo__wrapper__top {
+  color: #fff;
+  font-size: 12px;
+}
+
+.promo__wrapper__left {
+  max-width: 200px;
+}
+
+.promo__wrapper__left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 20px #000);
+}
+
 /*# sourceMappingURL=index.044e704e.css.map */
