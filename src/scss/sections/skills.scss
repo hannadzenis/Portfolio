@@ -1,0 +1,47 @@
+.skills{
+    min-height: 500px;
+    padding: 20px 0;
+    color: $white;
+    position: relative;
+    background-color: $bg-main-color;
+    &__wrapper{
+        font-size: 20px;
+        &__title{
+            height: 61px;
+            margin-bottom: 20px;
+            padding: 15px;
+            color: $white;
+            background: url(../../img/Ellipse.svg) no-repeat;
+        }
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+            grid-template-rows: repeat(1, minmax(200px, auto));
+            grid-auto-rows: minmax(200px, auto);
+            padding: 50px;
+            gap: 50px;
+            justify-content: center;
+            margin: 0 auto;
+            &__item{
+                max-width: 250px;
+                min-height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;      
+                -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+                -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+                border: none;
+                background-color: rgb(80, 23, 106);
+                &:hover{
+                    background-color: #c535c8;
+                    color: #2e0622;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
