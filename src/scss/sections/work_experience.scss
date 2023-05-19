@@ -4,6 +4,7 @@
     color: $white;
     background: $bg-main-color radial-gradient(30% 50% at 55% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
     &__wrapper{
+        padding: 0 100px;
         font-size: 20px;
         &__title{
             text-align: center;
@@ -15,6 +16,8 @@
             display: flex;
             justify-content: space-evenly;
             &__item{
+                max-width: 50%;
+                max-height: 50%;
                 padding: 40px;
                 margin: 20px;
                 box-shadow: 4px 7px 26px rgba(0, 0, 0, 0.12);
@@ -34,9 +37,14 @@
                         }
                     }
                     &__description{
+                        max-width: 450px;
                         &__title{
                             font-size: 28px;
                             margin-bottom: 30px;
+                            text-align: center;
+                        }
+                        &__text{
+                            color:rgb(96, 90, 90);
                         }
                     }
                 }
