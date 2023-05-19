@@ -8,5 +8,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
   }
 }
