@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Preahvihear&display=swap";
 * {
   box-sizing: border-box;
   outline: none;
@@ -51,7 +52,7 @@
 }
 
 .promo {
-  min-height: 500px;
+  min-height: 700px;
   background-color: #150e20;
   align-items: center;
   padding: 20px 0;
@@ -61,10 +62,22 @@
 
 .promo__top {
   color: #f1ecec;
+  font-family: Preahvihear, sans-serif;
   font-size: 19px;
   position: absolute;
+  top: 90px;
+  left: 500px;
+}
+
+.promo__top span {
+  color: #784cad;
+}
+
+.promo__top img {
+  position: absolute;
   top: 40px;
-  left: 300px;
+  right: 250px;
+  transform: rotate(-15deg);
 }
 
 .promo__wrapper {
@@ -80,7 +93,7 @@
 .promo__wrapper__left img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: drop-shadow(0 0 20px #4a2874);
 }
 
@@ -89,62 +102,46 @@
 }
 
 .promo__wrapper__right__title {
-  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-family: Preahvihear, sans-serif;
   font-size: 50px;
 }
 
 .promo__wrapper__right__sub-title {
   font-size: 21px;
+  display: none;
 }
 
-.promo__wrapper__right__description {
-  margin-top: 70px;
-  font-size: 22px;
-  font-weight: 500;
+.scroller {
+  height: 1.2em;
+  width: 15em;
+  margin-top: 30px;
+  font-size: 1.4em;
+  line-height: 1.3em;
+  position: relative;
+  overflow: hidden;
 }
 
-.arrow {
-  width: 30px;
-  height: 80px;
-  margin: 40px auto 10px;
+.scroller > p {
+  animation: 5s infinite slide;
   position: absolute;
-  top: 40px;
-  left: 270px;
-  transform: rotate(20deg);
+  top: 0;
 }
 
-.arrow span {
-  width: 30px;
-  height: 30px;
-  border-bottom: 5px solid #4b1e62;
-  border-right: 5px solid #4b1e62;
-  margin: -16px 0;
-  animation: 2s infinite arrow;
-  display: block;
-  transform: rotate(45deg);
-}
-
-.arrow span:nth-child(2) {
-  animation-delay: -.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: -.4s;
-}
-
-@keyframes arrow {
+@keyframes slide {
   0% {
-    opacity: 0;
-    transform: translate(0, -20px)rotate(45deg);
+    top: 0;
+  }
+
+  25% {
+    top: -1.4em;
   }
 
   50% {
-    opacity: 1;
+    top: -2.9em;
   }
 
-  100% {
-    opacity: 0;
-    transform: translate(0, 20px)rotate(45deg);
+  75% {
+    top: -4em;
   }
 }
 
@@ -165,7 +162,8 @@
   color: #f1ecec;
   background: url("Ellipse.9441af68.svg") no-repeat;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 5px;
+  font-family: Preahvihear, sans-serif;
 }
 
 .skills__wrapper__list {
@@ -214,6 +212,7 @@
   color: #f1ecec;
   margin-bottom: 20px;
   padding: 15px;
+  font-family: Preahvihear, sans-serif;
 }
 
 .experience__wrapper__list {
@@ -250,16 +249,77 @@
 
 .experience__wrapper__list__item__info__description {
   max-width: 450px;
+  animation: 2s ease-in-out forwards animate;
+  overflow: hidden;
 }
 
 .experience__wrapper__list__item__info__description__title {
   text-align: center;
-  margin-bottom: 30px;
+  color: #fff;
+  margin: 40px 0;
   font-size: 28px;
 }
 
 .experience__wrapper__list__item__info__description__text {
-  color: #605a5a;
+  color: #c6c1c1;
+  text-align: center;
+}
+
+@keyframes animate {
+  0% {
+    width: 365px;
+    height: 0;
+  }
+
+  10% {
+    width: 365px;
+    height: 55px;
+  }
+
+  20% {
+    width: 365px;
+    height: 110px;
+  }
+
+  30% {
+    width: 365px;
+    height: 165px;
+  }
+
+  40% {
+    width: 365px;
+    height: 220px;
+  }
+
+  50% {
+    width: 365px;
+    height: 275px;
+  }
+
+  60% {
+    width: 365px;
+    height: 330px;
+  }
+
+  70% {
+    width: 365px;
+    height: 385px;
+  }
+
+  80% {
+    width: 365px;
+    height: 440px;
+  }
+
+  90% {
+    width: 365px;
+    height: 495px;
+  }
+
+  100% {
+    width: 365px;
+    height: 550px;
+  }
 }
 
 .experience__wrapper__list__item--1 {
