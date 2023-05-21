@@ -1,0 +1,112 @@
+.contacts{
+    display: flex;
+    min-height: 500px;
+    padding: 20px 0;
+    color: $white;
+    background-color: $bg-main-color;
+    &__title{
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        color: $white;
+        font-family: 'Preahvihear', sans-serif;
+    }
+    &__wrapper{
+        max-width: 600px;
+        &__media{
+            max-width: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            & p{
+                // margin: 0 10px 0;
+                padding: 20px;
+            }
+            & a{
+                max-width: 50px;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit:contain;
+                }
+            }
+        }
+        &__text{
+            text-align: center;
+        }
+        &__form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}
+
+.name, .surname, .email, .phone{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #160718;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    color: White;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    border: 3px solid #c3c3c3;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+}
+
+.privacy-policy{
+    display: flex;
+    align-items:center;
+}
+
+.privacy-policy__input{
+    margin-left: 10px;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.privacy-policy p{
+    margin: 0 30px;
+}
+
+.privacy-policy__input:checked{
+    background-color: #450e4e;
+}
+
+.send-form{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    background-color: #450e4e;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 23px;
+    transition: .3s all;
+    box-shadow: 0 0 0 #000;
+    margin: 20px 0 0;
+}
+
+

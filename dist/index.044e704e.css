@@ -149,6 +149,7 @@
   min-height: 500px;
   color: #f1ecec;
   background-color: #150e20;
+  margin: 0 auto;
   padding: 20px 0;
   position: relative;
 }
@@ -168,11 +169,10 @@
 
 .skills__wrapper__list {
   grid-template-rows: repeat(1, minmax(200px, auto));
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   grid-auto-rows: minmax(200px, auto);
   justify-content: center;
   gap: 50px;
-  margin: 0 auto;
   padding: 50px;
   display: grid;
 }
@@ -249,8 +249,6 @@
 
 .experience__wrapper__list__item__info__description {
   max-width: 450px;
-  animation: 2s ease-in-out forwards animate;
-  overflow: hidden;
 }
 
 .experience__wrapper__list__item__info__description__title {
@@ -323,11 +321,181 @@
 }
 
 .experience__wrapper__list__item--1 {
+  opacity: .8;
   background: linear-gradient(110.49deg, #130428 19.95%, #251043 67.64%, #38126d 107.08%, #261045 156.61%, #190634 183.21%);
 }
 
 .experience__wrapper__list__item--2 {
+  opacity: .8;
   background: linear-gradient(150.56deg, #130428 .58%, #251043 16.32%, #38126d 29.33%, #261045 45.66%, #190634 54.44%);
+}
+
+.projects {
+  min-height: 500px;
+  color: #f1ecec;
+  background-color: #150e20;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.projects__wrapper__title {
+  text-align: center;
+  color: #f1ecec;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: Preahvihear, sans-serif;
+}
+
+.projects__wrapper__list {
+  grid-template-rows: repeat(1, minmax(200px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-auto-rows: minmax(200px, auto);
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+  display: grid;
+}
+
+.projects__wrapper__list__item {
+  max-width: 400px;
+  min-height: 250px;
+}
+
+.projects__wrapper__list__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: blur(2px);
+}
+
+.projects__wrapper__list__description {
+  max-width: 300px;
+}
+
+.projects__wrapper__list__description img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.contacts {
+  min-height: 500px;
+  color: #f1ecec;
+  background-color: #150e20;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contacts__title {
+  text-align: center;
+  color: #f1ecec;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: Preahvihear, sans-serif;
+}
+
+.contacts__wrapper {
+  max-width: 600px;
+}
+
+.contacts__wrapper__media {
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.contacts__wrapper__media p {
+  padding: 20px;
+}
+
+.contacts__wrapper__media a {
+  max-width: 50px;
+}
+
+.contacts__wrapper__media a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contacts__wrapper__text {
+  text-align: center;
+}
+
+.contacts__wrapper__form {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+  display: flex;
+}
+
+.name, .surname, .email, .phone {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  border: 1px solid #160718;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  border: 3px solid #c3c3c3;
+  border-radius: 25px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  line-height: 18px;
+  display: flex;
+}
+
+.privacy-policy {
+  align-items: center;
+  display: flex;
+}
+
+.privacy-policy__input {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  outline: none;
+  margin-left: 10px;
+}
+
+.privacy-policy p {
+  margin: 0 30px;
+}
+
+.privacy-policy__input:checked {
+  background-color: #450e4e;
+}
+
+.send-form {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #450e4e;
+  border: none;
+  border-radius: 25px;
+  margin: 20px 0 0;
+  padding: 12px 23px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  transition: all .3s;
+  box-shadow: 0 0 #000;
 }
 
 /*# sourceMappingURL=index.044e704e.css.map */

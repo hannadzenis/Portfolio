@@ -101,13 +101,52 @@
             </div>
         </div>
     </section>
-    <!-- <section class="myprojects"></section> -->
-    <footer class="contact">
+    <section class="projects">
+        <div class="container">
+            <div class="projects__wrapper">
+                <h2 class="projects__wrapper__title">My Projects</h1>
+                <div class="projects__wrapper__list">
+                    <a class="projects__wrapper__list__item" href="https://cyberman-00.github.io/Front-end_Airport-simulator/dist/">
+                        <img src="../img/airports.png">
+                    </a>
+                    <a class="projects__wrapper__list__item" href="#">
+                        <img src="../img/airports.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container">
+            <h3 class="contacts__title">Contact Me</h3>
+            <div class="contacts__wrapper">
+                <div class="contacts__wrapper__media">
+                        <p class="contacts__wrapper__text">In social media</p>
+                        <a href="#"><img src="../img/inst.svg"></a>
+                        <a href="#"><img src="../img/telegram.svg"></a>
+                </div>
+                <p class="contacts__wrapper__text">Or leave me a message</p>
+                <form class="contacts__wrapper__form">
+                    <input type="text" class="name" name="user_name" placeholder="Name" required aria-required="true">
+                    <input type="text" class="surname" name="user_surname" placeholder="Surname" required aria-required="true">
+                    <input type="text" class="email" name="user_email" placeholder="Email" required aria-required="true">
+                    <input type="text" class="phone" name="user_phone" placeholder="Phone">
+                    <textarea type="text" name="user_message" id cols="30" rows="10" placeholder="Your message"></textarea>
+                    <div class="privacy-policy">
+                        <input type="checkbox" class="privacy-policy__input" name="user_policy" required aria-required="true">
+                        <p>I <span>agree</span> with the <a href="">privacy policy</a></p>
+                    </div>
+                    <button class="send-form button">Contact me</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- <footer class="contact">
         <div class="contact__wrapper">
             <div class="contact__wrapper__title">Contact <p>Me</p></div>
             <div class="contact__wrapper__text"></div>
         </div>
-    </footer>
+    </footer> -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
