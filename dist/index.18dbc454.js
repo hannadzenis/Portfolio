@@ -557,34 +557,19 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"1SICI":[function(require,module,exports) {
-// const animItems = document.querySelectorAll('._anim_items');
-// if (animItems.length > 0){
-//     window.addEventListener('scroll', animOnScroll);
-//     function animOnScroll(){
-//         for (let i=0; i < animItems.length; i++){
-//             const animItem = animItems[i];
-//             const animItemHeight = animItem.offsetHeight;
-//             const animItemOffset = offset(animItem).top;
-//             const animStart = 4;
-//             let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//             if( animItemHeight > window.innerHeight ){
-//                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//             }
-//             if((pageYOffset > animItemOffset - animItemPoint)&& pageYOffset < (animItemOffset + animItemHeight)){
-//                 animItem.classList.add('_active');
-//             }else{
-//                 animItem.classList.remove('_active');
-//             }
-//         }
-//     }
-//     function offset(el) {
-//         const rect = el.getBoundClientRect(),
-//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-//     }
-//     animOnScroll()
-// }
+function onEntry(entry) {
+    entry.forEach((change)=>{
+        if (change.isIntersecting) change.target.classList.add("element-show");
+    });
+}
+let options = {
+    threshold: [
+        0.5
+    ]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll(".element-animation");
+for (let elm of elements)observer.observe(elm);
 
 },{}]},["9tRox","1SICI"], "1SICI", "parcelRequire716c")
 
