@@ -1,16 +1,26 @@
-function onEntry(entry) {
-    entry.forEach(change => {
-      if (change.isIntersecting) {
-        change.target.classList.add('element-show');
-      }
-    });
-  }
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
+
+AOS.init();
+
+AOS.init({
+
+  disable: false, 
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,
+  disableMutationObserver: false, 
+  debounceDelay: 50,
+  throttleDelay: 99, 
   
-  let options = {
-    threshold: [0.5] };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.element-animation');
-  
-  for (let elm of elements) {
-    observer.observe(elm);
-  }
+  offset: 120, 
+  delay: 0, 
+  duration: 400, 
+  easing: 'ease', 
+  once: false,
+  mirror: false, 
+  anchorPlacement: 'top-bottom', 
+});

@@ -37,6 +37,7 @@
                 box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
                 border: none;
                 background-color: rgb(80, 23, 106);
+                animation: pulse 2.8s infinite;
                 &:hover{
                     background-color: #c535c8;
                     color: #2e0622;
@@ -45,4 +46,38 @@
             }
         }
     }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}
+
+.pulse1{
+    animation-delay: 1s;
+}
+
+.pulse3{
+    animation-delay: 2s;
+}
+
+.pulse4{
+    animation-delay: 1.4s;
+}
+
+.pulse5{
+    animation-delay: 1.8s;
+}
+
+.pulse6{
+    animation-delay: 3s;
 }
