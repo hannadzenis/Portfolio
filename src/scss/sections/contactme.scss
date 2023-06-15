@@ -12,7 +12,9 @@
         font-family: 'Preahvihear', sans-serif;
     }
     &__wrapper{
-        max-width: 600px;
+        max-width: 400px;
+        background-color: $white;
+        border-radius: 25px;
         &__media{
             max-width: 700px;
             display: flex;
@@ -33,7 +35,9 @@
             }
         }
         &__text{
-            text-align: center;
+            // text-align: center;
+            color: rgb(60, 48, 48);
+            padding: 20px
         }
         &__form{
             display: flex;
@@ -48,22 +52,21 @@
 .name, .surname, .email, .phone{
     width: 100%;
     height: 40px;
-    border: 1px solid #160718;
-    border-radius: 25px;
-    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(119, 71, 139, 0.21);
     padding: 0 15px;
-    color: White;
+    color: rgb(85, 77, 77);
+    background-color: $white;
 }
 
 textarea {
-    resize: none;
     width: 100%;
-    border: 3px solid #c3c3c3;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    padding: 15px;
     display: flex;
+    padding: 15px;
     align-items: center;
+    background-color: $white;
+    resize: none;
+    border: none;
     line-height: 18px;
 }
 
@@ -76,7 +79,7 @@ textarea {
     margin-left: 10px;
     width: 1.3em;
     height: 1.3em;
-    background-color: white;
+    background-color: #ddd;
     border-radius: 50%;
     vertical-align: middle;
     border: 1px solid #ddd;
@@ -87,6 +90,7 @@ textarea {
 
 .privacy-policy p{
     margin: 0 30px;
+    color: rgb(135, 119, 119);
 }
 
 .privacy-policy__input:checked{

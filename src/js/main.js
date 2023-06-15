@@ -3,8 +3,6 @@ import 'aos/dist/aos.css';
 
 AOS.init();
 
-AOS.init();
-
 AOS.init({
 
   disable: false, 

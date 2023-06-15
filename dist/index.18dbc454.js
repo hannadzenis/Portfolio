@@ -562,7 +562,6 @@ var _aos = require("aos");
 var _aosDefault = parcelHelpers.interopDefault(_aos);
 var _aosCss = require("aos/dist/aos.css");
 (0, _aosDefault.default).init();
-(0, _aosDefault.default).init();
 (0, _aosDefault.default).init({
     disable: false,
     startEvent: "DOMContentLoaded",

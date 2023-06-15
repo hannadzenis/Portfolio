@@ -339,14 +339,13 @@
 
 .projects__wrapper__list__item {
   max-width: 400px;
-  min-height: 250px;
 }
 
 .projects__wrapper__list__item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  filter: blur(2px);
+  object-fit: cover;
+  filter: blur(1.5px);
 }
 
 .projects__wrapper__list__description {
@@ -377,7 +376,9 @@
 }
 
 .contacts__wrapper {
-  max-width: 600px;
+  max-width: 400px;
+  background-color: #f1ecec;
+  border-radius: 25px;
 }
 
 .contacts__wrapper__media {
@@ -403,7 +404,8 @@
 }
 
 .contacts__wrapper__text {
-  text-align: center;
+  color: #3c3030;
+  padding: 20px;
 }
 
 .contacts__wrapper__form {
@@ -417,20 +419,19 @@
 .name, .surname, .email, .phone {
   width: 100%;
   height: 40px;
-  color: #fff;
-  border: 1px solid #160718;
-  border-radius: 25px;
-  margin-bottom: 10px;
+  color: #554d4d;
+  background-color: #f1ecec;
+  border: none;
+  border-bottom: 1px solid #77478b36;
   padding: 0 15px;
 }
 
 textarea {
-  resize: none;
   width: 100%;
-  border: 3px solid #c3c3c3;
-  border-radius: 25px;
+  resize: none;
+  background-color: #f1ecec;
+  border: none;
   align-items: center;
-  margin-bottom: 10px;
   padding: 15px;
   line-height: 18px;
   display: flex;
@@ -447,7 +448,7 @@ textarea {
   vertical-align: middle;
   appearance: none;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #ddd;
   border: 1px solid #ddd;
   border-radius: 50%;
   outline: none;
@@ -455,6 +456,7 @@ textarea {
 }
 
 .privacy-policy p {
+  color: #877777;
   margin: 0 30px;
 }
 
