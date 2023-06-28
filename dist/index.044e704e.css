@@ -53,6 +53,12 @@
   font-size: 15px;
 }
 
+@media (max-width: 850px) {
+  .header__content__list {
+    display: none;
+  }
+}
+
 .promo {
   min-height: 700px;
   background-color: #150e20;
@@ -144,6 +150,144 @@
 
   75% {
     top: -4em;
+  }
+}
+
+@media (max-width: 1350px) {
+  .promo__top {
+    position: absolute;
+    top: 90px;
+    left: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .promo__top {
+    position: absolute;
+    top: 90px;
+    left: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .promo__top {
+    position: absolute;
+    top: 90px;
+    left: 250px;
+  }
+}
+
+@media (max-width: 950px) {
+  .promo__wrapper__right__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 681px) {
+  .promo__wrapper__right__title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 615px) {
+  .promo__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .promo__wrapper__right {
+    text-align: center;
+  }
+
+  .promo__top {
+    top: 40px;
+    left: 450px;
+  }
+
+  .promo__top img {
+    top: 40px;
+    right: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo__top {
+    left: 300px;
+  }
+}
+
+@media (max-width: 550px) {
+  .promo__top {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  .promo__top {
+    font-size: 14px;
+    left: 300px;
+  }
+
+  .promo__top img {
+    max-width: 70px;
+    transform: rotate(-25deg);
+  }
+}
+
+@media (max-width: 487px) {
+  .promo__top {
+    left: 280px;
+  }
+
+  .promo__top img {
+    max-width: 70px;
+    right: 140px;
+    transform: rotate(-25deg);
+  }
+
+  .promo__top {
+    left: 250px;
+  }
+}
+
+@media (max-width: 439px) {
+  .promo__top {
+    left: 240px;
+  }
+}
+
+@media (max-width: 420px) {
+  .promo__top {
+    left: 230px;
+  }
+}
+
+@media (max-width: 439px) {
+  .promo__top {
+    left: 220px;
+  }
+}
+
+@media (max-width: 398px) {
+  .promo__top {
+    left: 210px;
+  }
+}
+
+@media (max-width: 388px) {
+  .promo__top {
+    left: 200px;
+  }
+}
+
+@media (max-width: 377px) {
+  .promo__top {
+    font-size: 12px;
+    left: 200px;
+  }
+
+  .promo__top img {
+    right: 100px;
   }
 }
 

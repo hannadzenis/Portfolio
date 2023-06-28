@@ -79,3 +79,137 @@ top: -2.9em;
 top: -4em;
 }
 }
+
+@media (max-width: 1350px) {
+    .promo__top{
+        position: absolute;
+        top: 90px;
+        left: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .promo__top{
+        position: absolute;
+        top: 90px;
+        left: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .promo__top{
+        position: absolute;
+        top: 90px;
+        left: 250px;
+    }
+}
+
+@media (max-width: 950px) {
+    .promo__wrapper__right__title{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 681px) {
+    .promo__wrapper__right__title{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 615px) {
+    .promo__wrapper{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .promo__wrapper__right{
+        text-align: center;
+    }
+    .promo__top{
+        top: 40px;
+        left: 450px;
+    }
+    .promo__top img{
+        top: 40px;
+        right: 170px;
+    }
+}
+
+@media (max-width: 600px) {
+    .promo__top{
+        left: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .promo__top{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 510px) {
+    .promo__top{
+        left: 300px;
+        font-size: 14px;
+    }
+    .promo__top img{
+        max-width: 70px;
+        transform: rotate(-25deg);
+    }
+}
+
+@media (max-width: 487px) {
+    .promo__top{
+        left: 280px;
+    }
+    .promo__top img{
+        right: 140px;
+        max-width: 70px;
+        transform: rotate(-25deg);
+    }
+}
+
+@media (max-width: 487px) {
+    .promo__top{
+        left: 250px;
+    }
+}
+
+@media (max-width: 439px) {
+    .promo__top{
+        left: 240px;
+    }
+}
+
+@media (max-width: 420px) {
+    .promo__top{
+        left: 230px;
+    }
+}
+
+@media (max-width: 439px) {
+    .promo__top{
+        left: 220px;
+    }
+}
+
+@media (max-width: 398px) {
+    .promo__top{
+        left: 210px;
+    }
+}
+
+@media (max-width: 388px) {
+    .promo__top{
+        left: 200px;
+    }
+}
+
+@media (max-width: 377px) {
+    .promo__top{
+        left: 200px;
+        font-size: 12px;
+    }
+    .promo__top img{
+        right: 100px
+    }
+}
