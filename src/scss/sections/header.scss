@@ -15,7 +15,8 @@
                 height: 100%;
                 object-fit: contain;
             }
-        } &__list {
+        }
+        &__list {
             max-width: 520px;
             display: flex;
             justify-content:space-between;
@@ -24,12 +25,25 @@
                 font-size: 15px;
                 color: $white;
             }
-        } 
+        }
+        &__burger{
+            display: none;
+            max-width: 50px;
+            margin: 5px;
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
     }
 }
 
 @media (max-width: 850px) {
     .header__content__list{
         display: none;
+    }
+    .header__content__burger{
+        display: block;
     }
 }

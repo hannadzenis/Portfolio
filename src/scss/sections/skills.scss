@@ -81,3 +81,9 @@
 .pulse6{
     animation-delay: 3s;
 }
+
+@media (max-width: 517px) {
+    .skills__wrapper__title{
+        font-size: 25px;
+    }
+}
