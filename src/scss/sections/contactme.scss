@@ -1,73 +1,72 @@
 .contacts{
-    display: flex;
+    margin: 0 auto;
     min-height: 500px;
     padding: 20px 0;
     color: $white;
     background-color: $bg-main-color;
     &__title{
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 15px;
         color: $white;
-        font-family: 'Preahvihear', sans-serif;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
     }
     &__wrapper{
         max-width: 400px;
         background-color: $white;
         border-radius: 25px;
-        &__media{
-            max-width: 700px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            & p{
-                // margin: 0 10px 0;
-                padding: 20px;
-            }
-            & a{
-                max-width: 50px;
-                & img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit:contain;
-                }
-            }
-        }
-        &__text{
-            // text-align: center;
-            color: rgb(60, 48, 48);
-            padding: 20px
-        }
+        margin: 0 auto;
         &__form{
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            padding: 20px;
-            width: 100%;
+            justify-content: space-between;
+            padding: 15px;
+            max-width: 450px;
+            &_item{
+                position: relative;
+                margin: 5px 0;
+                width: 100%;
+                & label{
+                    position: absolute;
+                    top: 5px;
+                    left: 10px;
+                    color: rgb(34, 31, 31);
+                    text-transform: capitalize;
+                    font-size: 11px;
+                    transition: top .3s;
+                    padding: 0 5px;
+                    pointer-events: none;
+                }
+                & input, textarea{
+                    width: 100%;
+                    background-color: $white;
+                    border: 1px solid rgb(179, 162, 162);
+                    border-radius: 15px;
+                    padding: 5px 15px;
+                    color: rgb(95, 88, 88);
+                }
+                & input:focus ~ label , textarea:focus ~ label{
+                    top: -7px;
+                    background-color: $white;
+                    color: rgb(142, 24, 122);
+                }
+            }
+            &__button{
+                width: 60%;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 21px;
+                text-align: center;
+                color: #fff;
+                background-color: #450e4e;
+                border: none;
+                border-radius: 25px;
+                padding: 10px ;
+                transition: .3s all;
+                box-shadow: 0 0 0 #000;
+                margin: 20px auto 0;
+            }
         }
     }
-}
-
-.name, .surname, .email, .phone{
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-bottom: 1px solid rgba(119, 71, 139, 0.21);
-    padding: 0 15px;
-    color: rgb(85, 77, 77);
-    background-color: $white;
-}
-
-textarea {
-    width: 100%;
-    display: flex;
-    padding: 15px;
-    align-items: center;
-    background-color: $white;
-    resize: none;
-    border: none;
-    line-height: 18px;
 }
 
 .privacy-policy{
@@ -89,28 +88,11 @@ textarea {
 }
 
 .privacy-policy p{
-    margin: 0 30px;
+    margin: 0 15px;
     color: rgb(135, 119, 119);
+    font-size: 12px;
 }
 
 .privacy-policy__input:checked{
     background-color: #450e4e;
 }
-
-.send-form{
-    width: 100%;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    text-align: center;
-    color: #fff;
-    background-color: #450e4e;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 23px;
-    transition: .3s all;
-    box-shadow: 0 0 0 #000;
-    margin: 20px 0 0;
-}
-
-
