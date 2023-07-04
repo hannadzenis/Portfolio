@@ -27,7 +27,7 @@
                 width: 100%;
                 & label{
                     position: absolute;
-                    top: 5px;
+                    top: 8px;
                     left: 10px;
                     color: rgb(34, 31, 31);
                     text-transform: capitalize;
@@ -44,7 +44,7 @@
                     padding: 5px 15px;
                     color: rgb(95, 88, 88);
                 }
-                & input:focus ~ label , textarea:focus ~ label{
+                & input:focus ~ label, input:valid ~ label , textarea:focus ~ label, textarea:valid ~ label{
                     top: -7px;
                     background-color: $white;
                     color: rgb(142, 24, 122);

@@ -752,7 +752,7 @@
   font-size: 11px;
   transition: top .3s;
   position: absolute;
-  top: 5px;
+  top: 8px;
   left: 10px;
 }
 
@@ -765,7 +765,7 @@
   padding: 5px 15px;
 }
 
-.contacts__wrapper__form_item input:focus ~ label, .contacts__wrapper__form_item textarea:focus ~ label {
+.contacts__wrapper__form_item input:focus ~ label, .contacts__wrapper__form_item input:valid ~ label, .contacts__wrapper__form_item textarea:focus ~ label, .contacts__wrapper__form_item textarea:valid ~ label {
   color: #8e187a;
   background-color: #f1ecec;
   top: -7px;

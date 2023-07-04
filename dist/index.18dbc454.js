@@ -561,7 +561,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _aos = require("aos");
 var _aosDefault = parcelHelpers.interopDefault(_aos);
 var _aosCss = require("aos/dist/aos.css");
-(0, _aosDefault.default).init();
+/* Animations */ (0, _aosDefault.default).init();
 (0, _aosDefault.default).init({
     disable: false,
     startEvent: "DOMContentLoaded",
@@ -578,7 +578,17 @@ var _aosCss = require("aos/dist/aos.css");
     once: false,
     mirror: false,
     anchorPlacement: "top-bottom"
-});
+}); /* Form */  // const inputs = document.querySelectorAll('.contacts__wrapper__form_item')
+ // // console.log([inputs])
+ // const labels = document.querySelectorAll('.contacts__wrapper__form_item label')
+ // // console.log(labels)
+ // function noOverlayInputs () {
+ //   inputs.forEach((item)=>{
+ //     // e.target.value !== 0 ? item.classList.add('block') : e.target.value == 0;
+ //     console.log(item)
+ //   })
+ // }
+ // noOverlayInputs()
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
