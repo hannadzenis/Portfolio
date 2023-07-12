@@ -25,17 +25,16 @@ AOS.init({
   anchorPlacement: 'top-bottom', 
 });
 
-/* Form */
+/* Burger animation */
 
-// const inputs = document.querySelectorAll('.contacts__wrapper__form_item')
-// // console.log([inputs])
-// const labels = document.querySelectorAll('.contacts__wrapper__form_item label')
-// // console.log(labels)
-
-// function noOverlayInputs () {
-//   inputs.forEach((item)=>{
-//     // e.target.value !== 0 ? item.classList.add('block') : e.target.value == 0;
-//     console.log(item)
-//   })
-// }
-// noOverlayInputs()
+const burgerMenu = document.querySelector('.header__content__btn');
+let menuOpen = false;
+burgerMenu.addEventListener('click', ()=>{
+  if(!menuOpen){
+    burgerMenu.classList.add('open');
+    menuOpen = true;
+  } else {
+    burgerMenu.classList.remove('open');
+    menuOpen = false;
+  }
+})

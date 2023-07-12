@@ -578,17 +578,18 @@ var _aosCss = require("aos/dist/aos.css");
     once: false,
     mirror: false,
     anchorPlacement: "top-bottom"
-}); /* Form */  // const inputs = document.querySelectorAll('.contacts__wrapper__form_item')
- // // console.log([inputs])
- // const labels = document.querySelectorAll('.contacts__wrapper__form_item label')
- // // console.log(labels)
- // function noOverlayInputs () {
- //   inputs.forEach((item)=>{
- //     // e.target.value !== 0 ? item.classList.add('block') : e.target.value == 0;
- //     console.log(item)
- //   })
- // }
- // noOverlayInputs()
+});
+/* Burger animation */ const burgerMenu = document.querySelector(".header__content__btn");
+let menuOpen = false;
+burgerMenu.addEventListener("click", ()=>{
+    if (!menuOpen) {
+        burgerMenu.classList.add("open");
+        menuOpen = true;
+    } else {
+        burgerMenu.classList.remove("open");
+        menuOpen = false;
+    }
+});
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
