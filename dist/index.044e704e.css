@@ -77,7 +77,7 @@
 
 .header__content__btn__burger:before, .header__content__btn__burger:after {
   content: "";
-  width: 40px;
+  width: 30px;
   height: 2px;
   background: #fff;
   border-radius: 5px;
