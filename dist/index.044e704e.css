@@ -19,7 +19,6 @@
 }
 
 .header {
-  z-index: 1;
   background-color: #1a0b2e;
   top: 0;
 }
@@ -69,16 +68,45 @@
 .header__content__btn__burger {
   width: 40px;
   height: 2px;
+  z-index: 100;
   background: #fff;
   border-radius: 5px;
   transition: all .5s ease-in-out;
   box-shadow: 0 2px 5px #381010;
 }
 
+.burger__wrapper {
+  width: 300px;
+  height: 100%;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  background: radial-gradient(100% 50%, #270b42 0%, #320f8500 100%);
+  padding: 50px;
+  transition: all .5s ease-in-out;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -300px;
+}
+
+.burger__wrapper__content {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+.burger__wrapper__content a {
+  color: #bcb9b9;
+  margin: 10px;
+}
+
 .header__content__btn__burger:before, .header__content__btn__burger:after {
   content: "";
   width: 30px;
   height: 2px;
+  z-index: 1;
   background: #fff;
   border-radius: 5px;
   transition: all .5s ease-in-out;

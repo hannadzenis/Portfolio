@@ -28,13 +28,16 @@ AOS.init({
 /* Burger animation */
 
 const burgerMenu = document.querySelector('.header__content__btn');
+const openBurger = document.querySelector('.burger__wrapper')
 let menuOpen = false;
 burgerMenu.addEventListener('click', ()=>{
   if(!menuOpen){
     burgerMenu.classList.add('open');
     menuOpen = true;
+    openBurger.setAttribute('style', 'right: 0; visibility: visible; opacity: 1')
   } else {
     burgerMenu.classList.remove('open');
     menuOpen = false;
+    openBurger.setAttribute('style', 'right: -300px, visibility: hidden; opacity: 0')
   }
 })
