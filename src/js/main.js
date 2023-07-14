@@ -28,7 +28,8 @@ AOS.init({
 /* Burger animation */
 
 const burgerMenu = document.querySelector('.header__content__btn');
-const openBurger = document.querySelector('.burger__wrapper')
+const openBurger = document.querySelector('.burger__wrapper');
+
 let menuOpen = false;
 burgerMenu.addEventListener('click', ()=>{
   if(!menuOpen){
@@ -41,3 +42,13 @@ burgerMenu.addEventListener('click', ()=>{
     openBurger.setAttribute('style', 'right: -100%, visibility: hidden; opacity: 0')
   }
 })
+
+function closeBurger() {
+  if (burgerMenu.classList.contains('open')) {
+    burgerMenu.classList.remove('open');
+    menuOpen = true;
+    openBurger.setAttribute('style', 'right: -100%, visibility: hidden; opacity: 0')
+  }
+}
+
+openBurger.addEventListener('click', closeBurger);

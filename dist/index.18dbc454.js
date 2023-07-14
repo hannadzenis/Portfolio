@@ -593,6 +593,14 @@ burgerMenu.addEventListener("click", ()=>{
         openBurger.setAttribute("style", "right: -100%, visibility: hidden; opacity: 0");
     }
 });
+function closeBurger() {
+    if (burgerMenu.classList.contains("open")) {
+        burgerMenu.classList.remove("open");
+        menuOpen = true;
+        openBurger.setAttribute("style", "right: -100%, visibility: hidden; opacity: 0");
+    }
+}
+openBurger.addEventListener("click", closeBurger);
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
