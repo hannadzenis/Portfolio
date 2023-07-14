@@ -38,6 +38,6 @@ burgerMenu.addEventListener('click', ()=>{
   } else {
     burgerMenu.classList.remove('open');
     menuOpen = false;
-    openBurger.setAttribute('style', 'right: -40%, visibility: hidden; opacity: 0')
+    openBurger.setAttribute('style', 'right: -100%, visibility: hidden; opacity: 0')
   }
 })

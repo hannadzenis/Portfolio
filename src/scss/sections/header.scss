@@ -53,14 +53,14 @@
     display: block;
     width: 40%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: -40%;
+    right: -100%;
     padding: 50px;
     z-index: 5;
     visibility: hidden;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: all .5s;
     background: radial-gradient(100% 50% at 50% 50%, #270b42 0%, rgba(50, 15, 133, 0) 100%);
     &__content{
         display: flex;

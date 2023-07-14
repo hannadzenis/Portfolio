@@ -82,11 +82,11 @@
   opacity: 0;
   background: radial-gradient(100% 50%, #270b42 0%, #320f8500 100%);
   padding: 50px;
-  transition: all .5s ease-in-out;
+  transition: all .5s;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: -40%;
+  right: -100%;
 }
 
 .burger__wrapper__content {
