@@ -81,24 +81,23 @@
 }
 
 .burger__wrapper {
-  width: 40%;
-  height: 100%;
+  width: 300px;
+  min-height: 500px;
   z-index: 5;
   visibility: hidden;
   opacity: 0;
   background: radial-gradient(100% 50%, #270b42 0%, #320f8500 100%);
-  padding: 50px;
+  margin-right: -70px;
   transition: all .5s;
-  display: block;
   position: fixed;
   top: 0;
   right: -100%;
 }
 
 .burger__wrapper__content {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
   display: flex;
 }
 

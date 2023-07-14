@@ -56,23 +56,28 @@
 /* Burger */
 
 .burger__wrapper{
-    display: block;
-    width: 40%;
-    height: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
     position: fixed;
+    width: 300px;
+    min-height: 500px;
     top: 0;
     right: -100%;
-    padding: 50px;
+    // padding: 100px;
+    margin-right: -70px;
     z-index: 5;
     visibility: hidden;
     opacity: 0;
     transition: all .5s;
     background: radial-gradient(100% 50% at 50% 50%, #270b42 0%, rgba(50, 15, 133, 0) 100%);
     &__content{
+        // width: 100%;
+        // height: 500px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
         & a{
             margin: 10px;
             color: #bcb9b9;
