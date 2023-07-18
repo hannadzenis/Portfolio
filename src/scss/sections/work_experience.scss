@@ -23,7 +23,7 @@
                     align-items: center;
                     &__logo{
                         max-width: 300px;
-                        margin-bottom: 20px;
+                        padding: 20px;
                         filter: drop-shadow(0 0 20px rgb(242, 231, 231));
                         img{
                             width: 100%;
@@ -32,15 +32,18 @@
                         }
                     }
                     &__description{
+                        display: none;
                         &__title{
                             font-size: 28px;
                             margin: 40px 0;
                             text-align: center;
                             color:rgb(255, 255, 255);
+                            font-size: 24px;
                         }
                         &__text{
                             color:rgb(198, 193, 193);
                             text-align: center;
+                            font-size: 18px;
                         }
                     }
                 }
@@ -57,7 +60,13 @@
     box-shadow: 4px 7px 26px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
     padding: 1.5rem;
+    cursor: pointer;
 }
+
+.element-animation:hover {
+    box-shadow: 4px 7px 26px rgba(255, 255, 255, 0.588);
+}
+
 
 .element-animation.element-show {
     opacity: 1;

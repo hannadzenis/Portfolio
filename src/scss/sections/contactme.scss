@@ -72,27 +72,24 @@
 .privacy-policy{
     display: flex;
     align-items:center;
-}
-
-.privacy-policy__input{
-    margin-left: 10px;
-    width: 1.3em;
-    height: 1.3em;
-    background-color: #ddd;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.privacy-policy p{
-    margin: 0 15px;
-    color: rgb(135, 119, 119);
-    font-size: 12px;
-}
-
-.privacy-policy__input:checked{
-    background-color: #450e4e;
+    &__input{
+        margin-left: 10px;
+        width: 1.3em;
+        height: 1.3em;
+        background-color: #ddd;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        &:checked{
+            background-color: #450e4e;
+        }
+    }
+    & p{
+        margin: 0 15px;
+        color: rgb(135, 119, 119);
+        font-size: 12px;
+    }
 }

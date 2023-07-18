@@ -601,6 +601,17 @@ function closeBurger() {
     }
 }
 openBurger.addEventListener("click", closeBurger);
+/* POP-UP */ const itemCards = document.querySelectorAll(".element-animation");
+const overlay = document.querySelector(".overlay");
+itemCards.forEach((item)=>{
+    item.addEventListener("click", ()=>{
+        overlay.setAttribute("style", "display: block");
+    });
+});
+const closePopUp = document.querySelector(".pop-up__content__close");
+closePopUp.addEventListener("click", ()=>{
+    overlay.setAttribute("style", "display: none");
+});
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
