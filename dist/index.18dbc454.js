@@ -603,14 +603,17 @@ function closeBurger() {
 openBurger.addEventListener("click", closeBurger);
 /* POP-UP */ const itemCards = document.querySelectorAll(".element-animation");
 const overlay = document.querySelector(".overlay");
+const body = document.querySelector("body");
 itemCards.forEach((item)=>{
     item.addEventListener("click", ()=>{
         overlay.setAttribute("style", "display: block");
+        body.setAttribute("style", "overflow: hidden");
     });
 });
 const closePopUp = document.querySelector(".pop-up__content__close");
 closePopUp.addEventListener("click", ()=>{
     overlay.setAttribute("style", "display: none");
+    body.setAttribute("style", "overflow: visible");
 });
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {

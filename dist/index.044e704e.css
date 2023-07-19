@@ -469,7 +469,6 @@
 .skills__wrapper__list__item:hover {
   color: #2e0622;
   background-color: #c535c8;
-  transition: all .3s;
 }
 
 @keyframes pulse {
@@ -590,14 +589,6 @@
 .element-animation.element-show {
   opacity: 1;
   transition: opacity 1s;
-}
-
-.element-animation--1 {
-  background: linear-gradient(110.49deg, #130428 19.95%, #251043 67.64%, #38126d 107.08%, #261045 156.61%, #190634 183.21%);
-}
-
-.element-animation--2 {
-  background: linear-gradient(150.56deg, #130428 .58%, #251043 16.32%, #38126d 29.33%, #261045 45.66%, #190634 54.44%);
 }
 
 @media (max-width: 870px) {

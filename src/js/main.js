@@ -57,14 +57,17 @@ openBurger.addEventListener('click', closeBurger);
 
 const itemCards = document.querySelectorAll('.element-animation')
 const overlay = document.querySelector('.overlay')
+const body = document.querySelector('body')
 
 itemCards.forEach((item) => {
   item.addEventListener('click', ()=>{
-    overlay.setAttribute('style', 'display: block')
+    overlay.setAttribute('style', 'display: block');
+    body.setAttribute('style', 'overflow: hidden')
   })
 })
 
 const closePopUp = document.querySelector('.pop-up__content__close')
 closePopUp.addEventListener('click', () => {
-  overlay.setAttribute('style', 'display: none')
+  overlay.setAttribute('style', 'display: none');
+  body.setAttribute('style', 'overflow: visible')
 })
