@@ -91,7 +91,7 @@
             <div class="experience__wrapper">
                 <h2 class="experience__wrapper__title">Work Experience</h2>
                 <div class="experience__wrapper__list">
-                    <div class="element-animation" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <div class="element-animation element-animation--1" data-aos="zoom-in-right" data-aos-duration="1000">
                         <div class="experience__wrapper__list__item__info">
                             <div class="experience__wrapper__list__item__info__logo">
                                 <img src="../img/Deloitte_logo.png" alt="Deloitte">
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="element-animation" data-aos="zoom-in-left" data-aos-duration="1000">
+                    <div class="element-animation element-animation--2" data-aos="zoom-in-left" data-aos-duration="1000">
                         <div class="experience__wrapper__list__item__info">
                             <div class="experience__wrapper__list__item__info__logo">
                                 <img src="../img/Group 8.svg" alt="Freelance">
@@ -142,43 +142,55 @@
         <div class="container">
             <h2 class="contacts__title">Get in touch with me</h2>
             <div class="contacts__wrapper">
-                <form class="contacts__wrapper__form">
+                <form class="contacts__wrapper__form" id='form'>
                     <div class="contacts__wrapper__form_item">
-                        <input type="text" id="user-name" name="user_name" required aria-required="true" autocomplete="none">
+                        <input id='input' class='form__input _req '  type="text" name="user_name" aria-required="true" autocomplete="none">
                         <label for="">Name</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input type="text" id="user-surname" name="user_surname" required aria-required="true" autocomplete="none">
+                        <input id='input' class='form__input _req'  type="text" name="user_surname" aria-required="true" autocomplete="none">
                         <label for="">Surname</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input type="text" id="user-email"name="user_email" required aria-required="true" autocomplete="none">
+                        <input id='input' class='form__input _req _email' type="text" name="user_email" aria-required="true" autocomplete="none">
                         <label for="">Email</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input type="text" id="user-phone" required name="user_phone" autocomplete="none">
+                        <input type="text" id="user-phone" name="user_phone" autocomplete="none" class='form__input _req'>
                         <label for="">Phone number</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <textarea type="text" id="user-message" required name="user_message" id cols="30" rows="10" autocomplete="none"></textarea>
+                        <textarea type="text" id="user-message" name="user_message" id cols="30" rows="10" autocomplete="none" class='form__input _req'></textarea>
                         <label for="">Your message</label>
                     </div>
                     <div class="privacy-policy">
-                        <input type="checkbox" class="privacy-policy__input" name="user_policy" required aria-required="true">
+                        <input id='input' type="checkbox" class="privacy-policy__input _req" name="user_policy" aria-required="true">
                         <p>I agree with the <a href="https://www.privacypolicygenerator.info/live.php?token=MoQesEMEwaLq4kfECfJ2XbeYHG2gfbej">privacy policy</a></p>
                     </div>
-                    <button class="contacts__wrapper__form__button">Contact me</button>
+                    <button id='submit' class="contacts__wrapper__form__button">Contact me</button>
                 </form>
             </div>
         </div>
     </section>
-    <section class="overlay">
+    <section class="overlay deloitte">
         <div class="pop-up">
             <div class="container">
                 <div class="pop-up__content">
                     <button class="pop-up__content__close">x</button>
                     <div class="pop-up__content__info">
                         <div class="pop-up__content__info__description">As an immigration consultant at Deloitte, I provided guidance on immigration processes, assisted clients in obtaining visas and work permits, and ensured compliance with immigration regulations. Through this role, I gained expertise in various immigration programs and regulations, as well as project management and client service skills.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="overlay freelance">
+        <div class="pop-up">
+            <div class="container">
+                <div class="pop-up__content">
+                    <button class="pop-up__content__close">x</button>
+                    <div class="pop-up__content__info">
+                        <div class="pop-up__content__info__description">As a freelance front-end developer, I created engaging and responsive websites using HTML, CSS, JavaScript/TypeScript and React, while collaborating with clients to understand their design requirements and ensure timely delivery of projects.</div>
                     </div>
                 </div>
             </div>

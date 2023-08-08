@@ -42,7 +42,7 @@
                     border: 1px solid rgb(179, 162, 162);
                     border-radius: 15px;
                     padding: 5px 15px;
-                    color: rgb(95, 88, 88);
+                    color: rgb(69, 66, 66);
                 }
                 & input:focus ~ label, input:valid ~ label , textarea:focus ~ label, textarea:valid ~ label{
                     top: -7px;
@@ -67,6 +67,14 @@
             }
         }
     }
+}
+
+.form__input._error{
+    box-shadow: 0 0 2px red;
+}
+
+.privacy-policy__input._error{
+    border: 2px solid rgba(161, 36, 36, 0.748);
 }
 
 .privacy-policy{

@@ -850,7 +850,7 @@
 
 .contacts__wrapper__form_item input, .contacts__wrapper__form_item textarea {
   width: 100%;
-  color: #5f5858;
+  color: #454242;
   background-color: #f1ecec;
   border: 1px solid #b3a2a2;
   border-radius: 15px;
@@ -877,6 +877,14 @@
   line-height: 21px;
   transition: all .3s;
   box-shadow: 0 0 #000;
+}
+
+.form__input._error {
+  box-shadow: 0 0 2px red;
+}
+
+.privacy-policy__input._error {
+  border: 2px solid #a12424bf;
 }
 
 .privacy-policy {
