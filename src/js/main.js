@@ -95,7 +95,6 @@ inputs.forEach((item)=>{
 form.addEventListener('submit', formSend);
 
 const submitFormButton = document.getElementById('submit');
-console.log(submitFormButton)
 submitFormButton.addEventListener('click', ()=>{
   inputs.forEach((item)=>{
     item.removeAttribute('required');
@@ -151,6 +150,11 @@ function formValidate(form){
       }
     }
   }
+  // submitFormButton.addEventListener('click', ()=>{
+  //   inputs.forEach((item)=>{
+  //     item.setAttribute('required');
+  //   })
+  // })
   return error;
 }
 
