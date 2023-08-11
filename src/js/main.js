@@ -109,7 +109,6 @@ async function formSend(e) {
 
 
   if (error === 0){
-    // form.classList.add('_sending');
     let response = await fetch('sendmail.php', {
       method: 'POST',
       body: formData
@@ -150,11 +149,6 @@ function formValidate(form){
       }
     }
   }
-  // submitFormButton.addEventListener('click', ()=>{
-  //   inputs.forEach((item)=>{
-  //     item.setAttribute('required');
-  //   })
-  // })
   return error;
 }
 
@@ -171,3 +165,26 @@ function formRemoveError(input){
 function emailTest(input){
   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\.\w{2,8})+$/.test(input.value);
 }
+
+//Sending messages FORM
+
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "sendmail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});

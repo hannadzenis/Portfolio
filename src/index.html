@@ -143,6 +143,11 @@
             <h2 class="contacts__title">Get in touch with me</h2>
             <div class="contacts__wrapper">
                 <form class="contacts__wrapper__form" id='form'>
+
+                    <input type="hidden" name="project_name" value="Portfolio">
+                    <input type="hidden" name="admin_email" value="hannahdzenis@gmail.com">
+                    <input type="hidden" name="form_subject" value="Message from portfolio user">
+
                     <div class="contacts__wrapper__form_item">
                         <input id='input' class='form__input _req '  type="text" name="user_name" aria-required="true" autocomplete="none">
                         <label for="">Name</label>
@@ -196,6 +201,7 @@
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

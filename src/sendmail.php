@@ -1,117 +1,52 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
+$method = $_SERVER['REQUEST_METHOD'];
 
-$mail = new PHPMailer(true);
-$mail->CharSet = 'UTF-8';
-$mail->setLanguage('ru', 'phpmailer/language/');
-$mail->IsHTML(true);
+//Script Foreach
+$c = true;
+if ( $method === 'POST' ) {
 
-//from who
-$mail->setFrom('hannadzenis@icloud.com', 'Portfolio');
-//to who
-$mail->addAddress('hannahdzenis@gmail.com');
-//Theme of the mail
-$mail->Subject = 'Form usage from Portfolio';
+	$project_name = trim($_POST["project_name"]);
+	$admin_email  = trim($_POST["admin_email"]);
+	$form_subject = trim($_POST["form_subject"]);
 
-//body 
-$body = '<h1>Message from a client!<h1>';
+	foreach ( $_POST as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
+} else if ( $method === 'GET' ) {
 
-if(trim(!empty($_POST['name']))){
-    $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
+	$project_name = trim($_GET["project_name"]);
+	$admin_email  = trim($_GET["admin_email"]);
+	$form_subject = trim($_GET["form_subject"]);
+
+	foreach ( $_GET as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
 }
 
-if(trim(!empty($_POST['name']))){
-    $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
+$message = "<table style='width: 100%;'>$message</table>";
+
+function adopt($text) {
+	return '=?UTF-8?B?'.Base64_encode($text).'?=';
 }
 
-if(trim(!empty($_POST['surname']))){
-    $body.='<p><strong>Surname:</strong> '.$_POST['surname'].'</p>';
-}
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-if(trim(!empty($_POST['email']))){
-    $body.='<p><strong>Email:</strong> '.$_POST['email'].'</p>';
-}
-
-if(trim(!empty($_POST['phone']))){
-    $body.='<p><strong>Phone:</strong> '.$_POST['phone'].'</p>';
-}
-
-if(trim(!empty($_POST['message']))){
-    $body.='<p><strong>Message:</strong> '.$_POST['message'].'</p>';
-}
-
-//sending
-
-if (!$mail->send()){
-    $message = 'Error';
-}else{
-    $message = 'Data is sent!';
-}
-
-$response = ['message' => $message];
-
-header('Content-type: application/json');
-echo json_encode($response);
-?>
-
-// <!-- use PHPMailer/PHPMailer/PHPMailer;
-// use PHPMailer/PHPMailer/Exception;
-
-// require 'phpmailer/src/Exception.php';
-// require 'phpmailer/src/PHPMailer.php';
-
-// $mail = new PHPMailer(true);
-// $mail->CharSet = 'UTF-8';
-// $mail->setLanguage('ru', 'phpmailer/language/');
-// $mail->IsHTML(true);
-
-// //from who
-// $mail->setFrom('hannadzenis@icloud.com', 'Portfolio');
-// //to who
-// $mail->addAddress('hannahdzenis@gmail.com');
-// //Theme of the mail
-// $mail->Subject = 'Form usage from Portfolio';
-
-// //body 
-// $body = '<h1>Message from a client!<h1>';
-
-// if(trim(!empty($_POST['name']))){
-//     $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
-// }
-
-// if(trim(!empty($_POST['name']))){
-//     $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
-// }
-
-// if(trim(!empty($_POST['surname']))){
-//     $body.='<p><strong>Surname:</strong> '.$_POST['surname'].'</p>';
-// }
-
-// if(trim(!empty($_POST['email']))){
-//     $body.='<p><strong>Email:</strong> '.$_POST['email'].'</p>';
-// }
-
-// if(trim(!empty($_POST['phone']))){
-//     $body.='<p><strong>Phone:</strong> '.$_POST['phone'].'</p>';
-// }
-
-// if(trim(!empty($_POST['message']))){
-//     $body.='<p><strong>Message:</strong> '.$_POST['message'].'</p>';
-// }
-
-// //sending
-
-// if (!$mail->send()){
-//     $message = 'Error';
-// }else{
-//     $message = 'Data is sent!';
-// }
-
-// $response = ['message' => $message];
-
-// header('Content-type: application/json');
-// echo json_encode($response);
+mail($admin_email, adopt($form_subject), $message, $headers );

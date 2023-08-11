@@ -639,7 +639,6 @@ async function formSend(e) {
     let error = formValidate(form);
     let formData = new FormData(form);
     if (error === 0) {
-        // form.classList.add('_sending');
         let response = await fetch("sendmail.php", {
             method: "POST",
             body: formData
@@ -671,11 +670,6 @@ function formValidate(form) {
             error++;
         }
     }
-    // submitFormButton.addEventListener('click', ()=>{
-    //   inputs.forEach((item)=>{
-    //     item.setAttribute('required');
-    //   })
-    // })
     return error;
 }
 function formAddError(input) {
@@ -689,6 +683,25 @@ function formRemoveError(input) {
 function emailTest(input) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\.\w{2,8})+$/.test(input.value);
 }
+//Sending messages FORM
+$(document).ready(function() {
+    //E-mail Ajax Send
+    $("form").submit(function() {
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: th.serialize()
+        }).done(function() {
+            alert("Thank you!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+});
 
 },{"aos":"eRzTM","aos/dist/aos.css":"iYkXi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
