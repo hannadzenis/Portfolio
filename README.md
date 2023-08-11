@@ -1,2 +1,2 @@
 # Portfolio
-My site is live at https://hannadzenis.github.io/Portfolio/dist
+My site is live at https://bright-blancmange-84c076.netlify.app/
