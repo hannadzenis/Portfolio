@@ -86,105 +86,73 @@ closePopUp.forEach((item)=>{
 /* FORM */
 
 const inputs = document.querySelectorAll('input, textarea');
-const form = document.getElementById('form');
 
 inputs.forEach((item)=>{
   item.setAttribute('required', '');
 })
 
-form.addEventListener('submit', formSend);
+//Google Sheets
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxroPmbWVojRssdytrfCT0NfzB-EkkkFMBvH8l9Q5N7mX8a9OWFy92vcPwB20qt0tr8/exec'
+const form = document.forms['submit-to-google-sheet']
 
-const submitFormButton = document.getElementById('submit');
-submitFormButton.addEventListener('click', ()=>{
-  inputs.forEach((item)=>{
-    item.removeAttribute('required');
-  })
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
 })
 
-async function formSend(e) {
-  e.preventDefault();
-  let error = formValidate(form);
+//Pop-up
+const modalWindow = document.querySelector('.over');
+const modalButtons = document.querySelectorAll('.contacts__wrapper__form__button');
+const modalClose = document.querySelector('.pop-up_form__close');
+const contactInputs = document.querySelectorAll('[data-needed]');
 
-  let formData = new FormData(form);
+const policy = document.querySelector('.privacy-policy__input');
 
+// modal open
+modalButtons.forEach((item) => {
 
-  if (error === 0){
-    let response = await fetch('sendmail.php', {
-      method: 'POST',
-      body: formData
-    });
-    if(response.ok){
-      let result = await response.json();
-      alert(result.message);
-      formPreview.innerHTML = '';
-      form.reset();
-    }else{
-      alert('Ошибка!');
-    }
-  }else{
-    alert('Заполните обязательные поля!');
-  }
-}
-
-function formValidate(form){
-  let error = 0;
-  let formReq = document.querySelectorAll('._req');
-
-  for (let i=0; i<formReq.length; i++){
-    const input = formReq[i];
-    formRemoveError(input);
-
-    if(input.classList.contains('_email')){
-      if(emailTest(input)){
-        formAddError(input);
-        error++;
-      }
-    }else if(input.getAttribute('type') === 'checkbox' && input.checked === false){
-      formAddError(input);
-        error++;
-    }else{
-      if(input.value === ''){
-        formAddError(input);
-        error++;
-      }
-    }
-  }
-  return error;
-}
-
-function formAddError(input){
-  input.parentElement.classList.add('_error');
-  input.classList.add('_error')
-}
-
-function formRemoveError(input){
-  input.parentElement.classList.remove('_error');
-  input.classList.remove('_error');
-}
-
-function emailTest(input){
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\.\w{2,8})+$/.test(input.value);
-}
-
-//Sending messages FORM
-
-$(document).ready(function() {
-
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "sendmail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
+    item.addEventListener('click', openModal);
 });
+
+// modal close
+modalClose.addEventListener('click', closeModal);
+
+// modal close on window
+window.addEventListener('click', (e) => {
+    if (e.target == modalWindow) {
+        closeModal()
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape') {
+        closeModal()
+    }
+})
+
+function openModal() {
+
+    contactInputs.forEach((input) => {
+        if ((input.value !== '') & (policy.checked)) {
+            modalWindow.style.display = 'block'
+            // modal scroll lock
+            document.body.style.overflow = 'hidden'
+            document.getElementById('form').reset()
+            inputs.forEach((item)=>{
+              item.removeAttribute('required', '');
+            })
+        }
+    })
+
+}
+
+function closeModal() {
+    modalWindow.style.display = 'none'
+    // modal scroll unlock
+    document.body.style.overflow = ''
+    inputs.forEach((item)=>{
+      item.setAttribute('required', '');
+    })
+}

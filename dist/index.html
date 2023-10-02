@@ -122,16 +122,16 @@
             <div class="projects__wrapper">
                 <h2 class="projects__wrapper__title">My Projects</h2>
                 <div class="projects__wrapper__list">
-                    <a class="projects__wrapper__list__item" data-aos="zoom-in-left" data-aos-duration="2000" href="https://cyberman-00.github.io/Front-end_Airport-simulator/dist/">
+                    <a class="projects__wrapper__list__item" data-aos="zoom-in-left" data-aos-duration="2000" href="https://hannadzenis.github.io/100DniDoMatury/dist/">
                         <img src="/100dnido.ddef4394.png">
                     </a>
-                    <a class="projects__wrapper__list__item" data-aos="zoom-in" data-aos-duration="2000" href="https://cyberman-00.github.io/Front-end_Airport-simulator/dist/">
+                    <a class="projects__wrapper__list__item" data-aos="zoom-in" data-aos-duration="2000" href="https://github.com/hannadzenis/Pixema">
                         <img src="/pixema.f8f4e5dd.png">
                     </a>
-                    <a class="projects__wrapper__list__item" data-aos="zoom-in-right" data-aos-duration="2000" href="#">
+                    <a class="projects__wrapper__list__item" data-aos="zoom-in-right" data-aos-duration="2000" href="https://cyberman-00.github.io/Front-end_Airport-simulator/dist/">
                         <img src="/airports.468aefd1.png">
                     </a>
-                    <a class="projects__wrapper__list__item" data-aos="zoom-in-left" data-aos-duration="2000" href="#">
+                    <a class="projects__wrapper__list__item" data-aos="zoom-in-left" data-aos-duration="2000" href="https://hannadzenis.github.io/WB/src/">
                         <img src="/wild.b5ac95aa.png">
                     </a>
                 </div>
@@ -142,41 +142,60 @@
         <div class="container">
             <h2 class="contacts__title">Get in touch with me</h2>
             <div class="contacts__wrapper">
-                <form class="contacts__wrapper__form" id="form">
-
-                    <input type="hidden" name="project_name" value="Portfolio">
-                    <input type="hidden" name="admin_email" value="hannahdzenis@gmail.com">
-                    <input type="hidden" name="form_subject" value="Message from portfolio user">
+                <form class="contacts__wrapper__form" id="form" name="submit-to-google-sheet">
 
                     <div class="contacts__wrapper__form_item">
-                        <input id="input" class="form__input _req " type="text" name="user_name" aria-required="true" autocomplete="none">
+                        <input id="input" class="form__input _req " type="text" name="user_name" aria-required="true" autocomplete="none" data-needed="">
                         <label for="">Name</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input id="input" class="form__input _req" type="text" name="user_surname" aria-required="true" autocomplete="none">
+                        <input id="input" class="form__input _req" type="text" name="user_surname" aria-required="true" autocomplete="none" data-needed="">
                         <label for="">Surname</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input id="input" class="form__input _req _email" type="text" name="user_email" aria-required="true" autocomplete="none">
+                        <input id="input" class="form__input _req _email" type="text" name="user_email" aria-required="true" autocomplete="none" data-needed="">
                         <label for="">Email</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <input type="text" id="user-phone" name="user_phone" autocomplete="none" class="form__input _req">
+                        <input type="text" id="user-phone" name="user_phone" autocomplete="none" class="form__input _req" data-needed="">
                         <label for="">Phone number</label>
                     </div>
                     <div class="contacts__wrapper__form_item">
-                        <textarea type="text" id="user-message" name="user_message" cols="30" rows="10" autocomplete="none" class="form__input _req"></textarea>
+                        <textarea type="text" id="user-message" name="user_message" cols="30" rows="10" autocomplete="none" class="form__input _req" data-needed=""></textarea>
                         <label for="">Your message</label>
                     </div>
                     <div class="privacy-policy">
                         <input id="input" type="checkbox" class="privacy-policy__input _req" name="user_policy" aria-required="true">
                         <p>I agree with the <a href="https://www.privacypolicygenerator.info/live.php?token=MoQesEMEwaLq4kfECfJ2XbeYHG2gfbej">privacy policy</a></p>
                     </div>
-                    <button id="submit" class="contacts__wrapper__form__button">Contact me</button>
+                    <button type="submit" class="contacts__wrapper__form__button">Contact me</button>
                 </form>
             </div>
         </div>
     </section>
+    <section class="over">
+		<div class="container">
+			<div class="pop-up_form">
+				<div class="pop-up_form__close">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewbox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
+
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+
+						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+
+						<g id="SVGRepo_iconCarrier">
+							<g>
+								<path fill="#808184" d="M16,0C11.726,0,7.708,1.664,4.687,4.687C1.665,7.708,0,11.727,0,16s1.665,8.292,4.687,11.313 C7.708,30.336,11.726,32,16,32s8.292-1.664,11.313-4.687C30.335,24.292,32,20.273,32,16s-1.665-8.292-4.687-11.313 C24.292,1.664,20.274,0,16,0z M26.606,26.606C23.773,29.439,20.007,31,16,31s-7.773-1.561-10.606-4.394S1,20.007,1,16 S2.561,8.227,5.394,5.394S11.993,1,16,1s7.773,1.561,10.606,4.394S31,11.993,31,16S29.439,23.773,26.606,26.606z"></path>
+								<path fill="#808184" d="M22.01,9.989c-0.195-0.195-0.512-0.195-0.707,0L16,15.293l-5.303-5.304c-0.195-0.195-0.512-0.195-0.707,0 s-0.195,0.512,0,0.707L15.293,16L9.99,21.304c-0.195,0.195-0.195,0.512,0,0.707c0.098,0.098,0.226,0.146,0.354,0.146 s0.256-0.049,0.354-0.146L16,16.707l5.303,5.304c0.098,0.098,0.226,0.146,0.354,0.146s0.256-0.049,0.354-0.146 c0.195-0.195,0.195-0.512,0-0.707L16.707,16l5.303-5.304C22.206,10.501,22.206,10.185,22.01,9.989z"></path>
+							</g>
+						</g>
+
+					</svg>
+				</div>
+				<div class="pop-up_form__text">Thank You!</div>
+			</div>
+		</div>
+	</section>
     <section class="overlay deloitte">
         <div class="pop-up">
             <div class="container">
@@ -201,8 +220,8 @@
             </div>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/index.18dbc454.js" defer=""></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();
 

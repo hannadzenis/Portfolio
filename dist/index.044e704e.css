@@ -867,6 +867,7 @@
   width: 60%;
   text-align: center;
   color: #fff;
+  cursor: pointer;
   background-color: #450e4e;
   border: none;
   border-radius: 25px;
@@ -981,6 +982,50 @@
   color: #fff;
   text-align: center;
   font-size: 14px;
+}
+
+.pop-up_form {
+  max-width: 450px;
+  min-height: 50px;
+  color: gray;
+  text-align: center;
+  background-color: #4e4545;
+  border-radius: 30px;
+  padding: 35px 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pop-up_form__close {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #150e20;
+  border-radius: 100px;
+  padding: 5px;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+
+.pop-up_form__close svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.over {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: #00000080;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
