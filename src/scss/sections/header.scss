@@ -1,8 +1,8 @@
 .header {
     background-color: $hd-main-color;
-    position: sticky;
+    position: absolute;
     top: 0;
-    z-index: 400;
+    z-index: 100;
     &__content {
         display: flex;
         justify-content: space-between;
@@ -42,7 +42,7 @@
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 100;
+            // z-index: 100;
             &__burger{
                 width: 40px;
                 height: 2px;
@@ -50,7 +50,7 @@
                 box-shadow: 0 2px 5px rgb(56, 16, 16);
                 transition: all .5s ease-in-out;
                 background: #ffff;
-                z-index: 100;
+                // z-index: 100;
             }
         }
     }
@@ -69,7 +69,7 @@
     right: -100%;
     // padding: 100px;
     margin-right: -70px;
-    z-index: 5;
+    // z-index: 5;
     visibility: hidden;
     opacity: 0;
     transition: all .5s;
@@ -98,7 +98,7 @@
     box-shadow: 0 2px 5px rgb(56, 16, 16);
     transition: all .5s ease-in-out;
     background: #ffff;
-    z-index: 1;
+    // z-index: 1;
 }
 
 .header__content__btn__burger::before{
