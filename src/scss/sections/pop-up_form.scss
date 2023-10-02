@@ -12,6 +12,21 @@
 
     background-color: rgb(93, 55, 85);
     color: rgb(239, 230, 230);
+    &__close{
+        max-width: 40px;
+        max-height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 50%;
+        svg{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 }
 
 .over{
