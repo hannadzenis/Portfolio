@@ -92,7 +92,7 @@ inputs.forEach((item)=>{
 })
 
 //Google Sheets
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxroPmbWVojRssdytrfCT0NfzB-EkkkFMBvH8l9Q5N7mX8a9OWFy92vcPwB20qt0tr8/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx2iuOiJ_nXz8vJbEhHagGECeXJn7Rv6GtCGqhTV-YMt3drSBmRBSgErO58PrNPdb-y/exec'
 const form = document.forms['submit-to-google-sheet']
 
 form.addEventListener('submit', e => {
@@ -139,20 +139,19 @@ function openModal() {
             modalWindow.style.display = 'block'
             // modal scroll lock
             document.body.style.overflow = 'hidden'
-            document.getElementById('form').reset()
             inputs.forEach((item)=>{
               item.removeAttribute('required', '');
             })
-        }
-    })
-
-}
-
-function closeModal() {
-    modalWindow.style.display = 'none'
-    // modal scroll unlock
-    document.body.style.overflow = ''
-    inputs.forEach((item)=>{
-      item.setAttribute('required', '');
-    })
+          }
+        })
+      }
+      
+      function closeModal() {
+        modalWindow.style.display = 'none'
+        // modal scroll unlock
+        document.body.style.overflow = ''
+        inputs.forEach((item)=>{
+          item.setAttribute('required', '');
+        })
+        document.getElementById('form').reset()
 }
