@@ -601,33 +601,13 @@ function closeBurger() {
     }
 }
 openBurger.addEventListener("click", closeBurger);
-/* POP-UP */ const itemCardDeloitte = document.querySelector(".element-animation--1");
-const itemCardFreelance = document.querySelector(".element-animation--2");
-const overlayDel = document.querySelector(".deloitte");
-const overlayFree = document.querySelector(".freelance");
-const body = document.querySelector("body");
-itemCardDeloitte.addEventListener("click", ()=>{
-    overlayDel.setAttribute("style", "display: block");
-    body.setAttribute("style", "overflow: hidden");
-});
-itemCardFreelance.addEventListener("click", ()=>{
-    overlayFree.setAttribute("style", "display: block");
-    body.setAttribute("style", "overflow: hidden");
-});
-const closePopUp = document.querySelectorAll(".pop-up__content__close");
-closePopUp.forEach((item)=>{
-    item.addEventListener("click", ()=>{
-        overlayFree.setAttribute("style", "display: none");
-        overlayDel.setAttribute("style", "display: none");
-        body.setAttribute("style", "overflow: visible");
-    });
-});
 /* FORM */ const inputs = document.querySelectorAll("input, textarea");
 inputs.forEach((item)=>{
     item.setAttribute("required", "");
 });
+console.log(inputs);
 //Google Sheets
-const scriptURL = "https://script.google.com/macros/s/AKfycbx2iuOiJ_nXz8vJbEhHagGECeXJn7Rv6GtCGqhTV-YMt3drSBmRBSgErO58PrNPdb-y/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbw-8KoNfcIPWy77-zpCmFKyJ6MSwLPSSXnGs4bW9wdFPuyIpgPxV3Kn-jc1GBf_ooBJ/exec";
 const form = document.forms["submit-to-google-sheet"];
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
