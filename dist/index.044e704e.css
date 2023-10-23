@@ -45,7 +45,7 @@
 }
 
 .header__content__list {
-  max-width: 520px;
+  max-width: 620px;
   justify-content: space-between;
   gap: 84px;
   display: flex;
@@ -461,6 +461,7 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
   animation: 2.8s infinite pulse;
   display: flex;
   box-shadow: 0 20px 30px #0003, inset 0 10px 30px 5px #fff;
@@ -511,241 +512,44 @@
   }
 }
 
-.experience {
+.cv {
   min-height: 500px;
   color: #f1ecec;
-  background: #150e20 radial-gradient(30% 50% at 55%, #763cac 0%, #320f8500 100%);
+  background-color: #150e20;
+  margin: 0 auto;
   padding: 20px 0;
+  position: relative;
 }
 
-.experience__wrapper {
-  padding: 0 100px;
-  font-size: 20px;
-}
-
-.experience__wrapper__title {
-  text-align: center;
+.cv__title {
+  height: 61px;
   color: #f1ecec;
-  margin-bottom: 20px;
+  text-align: center;
+  background: url("Ellipse.9441af68.svg") center no-repeat;
+  margin-bottom: 40px;
   padding: 15px;
   font-family: Preahvihear, sans-serif;
 }
 
-.experience__wrapper__list {
-  justify-content: space-evenly;
-  display: flex;
+.cv__secondary-title {
+  text-align: center;
+  color: #f1ecec;
+  margin-bottom: 10px;
+  font-family: Preahvihear, sans-serif;
 }
 
-.experience__wrapper__list__item__info {
-  flex-direction: column;
-  align-items: center;
-  display: flex;
+.cv__img {
+  max-width: 700px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: block;
 }
 
-.experience__wrapper__list__item__info__logo {
-  max-width: 300px;
-  filter: drop-shadow(0 0 20px #f2e7e7);
-  padding: 20px;
-}
-
-.experience__wrapper__list__item__info__logo img {
+.cv__img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.experience__wrapper__list__item__info__description {
-  display: none;
-}
-
-.experience__wrapper__list__item__info__description__title {
-  text-align: center;
-  color: #fff;
-  margin: 40px 0;
-  font-size: 24px;
-}
-
-.experience__wrapper__list__item__info__description__text {
-  color: #c6c1c1;
-  text-align: center;
-  font-size: 18px;
-}
-
-.element-animation {
-  min-width: 50%;
-  opacity: 0;
-  cursor: pointer;
-  border-radius: 20px;
-  margin: 2rem 1rem;
-  padding: 1.5rem;
-  font-size: 1.5rem;
-  box-shadow: 4px 7px 26px #0000001f;
-}
-
-.element-animation:hover {
-  box-shadow: 4px 7px 26px #ffffff96;
-}
-
-.element-animation.element-show {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-@media (max-width: 870px) {
-  .experience__wrapper__list {
-    max-width: 500px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 20px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 24px;
-  }
-
-  .experience__wrapper__list__item__info__logo {
-    max-width: 250px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 610px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 18px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 576px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 14px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 522px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 12px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  .experience__wrapper__title {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 498px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 10px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    margin: 10px 0;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 473px) {
-  .experience__wrapper__title {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 452px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 8px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    margin: 10px 0;
-    font-size: 10px;
-  }
-
-  .experience__wrapper__title {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 431px) {
-  .element-animation {
-    padding: 10px;
-  }
-
-  .experience__wrapper__title {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 414px) {
-  .experience__wrapper__title {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 400px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 7px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 9px;
-  }
-
-  .experience__wrapper__title {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 390px) {
-  .experience__wrapper__title {
-    padding: 0;
-  }
-}
-
-@media (max-width: 388px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 6px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 377px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 5px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    font-size: 7px;
-  }
-}
-
-@media (max-width: 365px) {
-  .experience__wrapper__list__item__info__description__text {
-    font-size: 5px;
-  }
-
-  .experience__wrapper__list__item__info__description__title {
-    margin: 5px 0;
-    font-size: 6px;
-  }
+  border-radius: 25px;
 }
 
 .projects {
