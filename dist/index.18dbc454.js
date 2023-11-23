@@ -586,6 +586,7 @@ burgerMenu.addEventListener("click", ()=>{
     if (!menuOpen) {
         burgerMenu.classList.add("open");
         menuOpen = true;
+        document.body.style.overflow = "hidden";
         openBurger.setAttribute("style", "right: 0; visibility: visible; opacity: 1");
     } else {
         burgerMenu.classList.remove("open");
@@ -597,6 +598,7 @@ function closeBurger() {
     if (burgerMenu.classList.contains("open")) {
         burgerMenu.classList.remove("open");
         menuOpen = true;
+        document.body.style.overflow = "";
         openBurger.setAttribute("style", "right: -100%, visibility: hidden; opacity: 0");
     }
 }

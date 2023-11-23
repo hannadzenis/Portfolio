@@ -262,6 +262,42 @@
   }
 }
 
+@media (max-width: 2500px) {
+  .promo__top {
+    left: 942px;
+  }
+}
+
+@media (max-width: 2250px) {
+  .promo__top {
+    left: 825px;
+  }
+}
+
+@media (max-width: 2070px) {
+  .promo__top {
+    left: 748px;
+  }
+}
+
+@media (max-width: 1860px) {
+  .promo__top {
+    left: 633px;
+  }
+}
+
+@media (max-width: 1640px) {
+  .promo__top {
+    left: 535px;
+  }
+}
+
+@media (max-width: 1512px) {
+  .promo__top {
+    left: 480px;
+  }
+}
+
 @media (max-width: 1350px) {
   .promo__top {
     top: 90px;
