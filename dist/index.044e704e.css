@@ -144,7 +144,7 @@
   transform: rotate(-45deg)translate(35px, 35px);
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 3000px) {
   .header__content__burger {
     display: none;
   }
@@ -262,9 +262,15 @@
   }
 }
 
-@media (max-width: 2500px) {
+@media (max-width: 2600px) {
   .promo__top {
-    left: 942px;
+    left: 1000px;
+  }
+}
+
+@media (max-width: 2400px) {
+  .promo__top {
+    left: 900px;
   }
 }
 
